@@ -29,15 +29,45 @@ elseif int_sum > max_val
         num_int = int - 1;
         tt_int_ct = int_sum + last_int;
 end
-disp(int);
-disp(tt_int_ct);
-disp(int_sum);
-disp(num_int);
-disp(last_int);
+
+int
+num_int
+
+
 
 
 %%
 % P3
 
+A = imread('lifeguard.jpg');
+B = imread('shark5.jpg');
+C = imread('surfer5.jpg');
 
+AB = imfuse(A, B, 'blend','Scaling','joint');
+ABC = imfuse(AB, C, 'blend','Scaling','joint');
+imshow(ABC);
 
+%%
+% P4
+close all; clear; clc;
+x = -2:0.1:5;
+m = linspace(1/8,10,length(x));
+figure;
+
+for i=1:length(x)
+    y1(i,:) = i.*sin(m(i).*x);
+    y2(i,:) = i.*cos(m(i).*x);
+end
+
+for anistep=1:length(m)
+    hold on
+    plot(x,y1(anistep,:));
+    plot(x,y2(anistep,:));
+    xlim([2,5]);
+    ylim([-70,70]);
+    title_string=['Y = sin(', + num2str(anistep),')'];
+    title(title_string, 'FontSize',24);
+    drawnow;
+    pause(1/30);
+    hold off
+end
