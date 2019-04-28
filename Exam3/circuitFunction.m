@@ -1,7 +1,12 @@
 function circuitFunction()
 %CIRCUITFUNCTION Plots our circuit results through 1,000 simulations
 
+figure();
+title("Cutoff Frequencies over 1000 Simulations");
+xlabel("Resistance");
+ylabel("Frequency");
 hold on
+
 for i = 1:1001
     r = -5 + (5+5)*rand(1);
     Resistance = 1000 + 0.01*r*1000;
