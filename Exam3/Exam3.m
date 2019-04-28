@@ -24,3 +24,19 @@ movie(M)
 % P3
 
 circuitFunction();
+
+%%
+% P4
+
+myString = "Jack and Jill went up the hill To fetch a pail of water. Jack fell down and broke his crown, And Jill came tumbling after.Up Jack got, and home he trot, As fast as he could caper, He went to bed to mend his head, With vinegar and brown paper.";
+
+just_jill(myString)
+
+
+%%
+% P5
+
+
+
+
+
