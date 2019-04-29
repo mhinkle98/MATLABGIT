@@ -67,9 +67,11 @@ for ii = 1:s(2)
     fprintf('If we use %s, the total cost will be %6.2f', processes(ii).process, cost);
     fprintf('\n');
 end
+
 % Part c
-%processes(4) = struct('process', 'Assembling', 'hr_cost', 23, 'product1', 5, 'product2', 7, 'product3', 15);
-%processes(5) = struct('process', 'Delivery', 'hr_cost', 19, 'product1', 8, 'product2', 20, 'product3', 7);
+processes = process_cost;
+processes(4) = struct('process', 'Assembling', 'hr_cost', 23, 'product1', 5, 'product2', 7, 'product3', 15);
+processes(5) = struct('process', 'Delivery', 'hr_cost', 19, 'product1', 8, 'product2', 20, 'product3', 7);
 
 %%
 % P7
