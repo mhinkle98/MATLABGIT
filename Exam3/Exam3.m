@@ -34,8 +34,7 @@ just_jill(myString)
 %%
 % P5
 clear;clc;
-A = {"Walden Pond", "June 13, 1997";[60 72 75], [55 57 56;54 56 55;
-    52 55 53]};
+A = {"Walden Pond", "June 13, 1997";[60 72 75], [55 57 56;54 56 55; 52 55 53]};
 cellplot(A);
 A{2,2}(2,2) = 85;
 
@@ -48,21 +47,21 @@ clear;clc;
 processes = process_cost;
 s = size(processes);
 for ii = 1:s(2)
-    cost1 = processes(ii).product1*processes(ii).hourlycost;
-    fprintf('Costs %s to produce 1 unit of: %g', processes(ii).process, cost1);
+    cost1 = processes(ii).product1*processes(ii).hr_cost;
+    fprintf('Costs %g to produce 1 unit of Product1 by the process %s', cost1, processes(ii).process);
     fprintf('\n');
-    cost2 = processes(ii).product2*processes(ii).hourlycost;
-    fprintf('Costs %s to produce 1 unit of: %g', processes(ii).process, cost2);
+    cost2 = processes(ii).product2*processes(ii).hr_cost;
+    fprintf('Costs %g to produce 1 unit of Product2 by the process %s', cost2, processes(ii).process);
     fprintf('\n');
-    cost3 = processes(ii).product3*processes(ii).hourlycost;
-    fprintf('Costs %s to produce 1 unit of: %g', processes(ii).process, cost3);
+    cost3 = processes(ii).product3*processes(ii).hr_cost;
+    fprintf('Costs %g to produce 1 unit of Product3 by the process %s', cost3, processes(ii).process);
     fprintf('\n');
 end
 
 for ii = 1:s(2)
-    cost1 = 10 * processes(ii).product1*processes(ii).hourlycost;
-    cost2 = 5 * processes(ii).product2*processes(ii).hourlycost;
-    cost3 = 7 * processes(ii).product3*processes(ii).hourlycost;
+    cost1 = 10 * processes(ii).product1*processes(ii).hr_cost;
+    cost2 = 5 * processes(ii).product2*processes(ii).hr_cost;
+    cost3 = 7 * processes(ii).product3*processes(ii).hr_cost;
     cost = cost1 + cost2 + cost3;
     fprintf('If we use %s, the total cost will be %6.2f', processes(ii).process, cost);
     fprintf('\n');

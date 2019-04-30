@@ -11,8 +11,8 @@ while ~stop
     if isempty(process)
         break;
     end
-    hourlycost = input(['Hourly cost of ', process, ': ']);
-    if isempty(hourlycost)
+    hr_cost = input(['Hourly cost of ', process, ': ']);
+    if isempty(hr_cost)
         break;
     end
     product1 = input(['Hours required to produce one unit of product 1 by ', process, ': ']);
@@ -29,7 +29,7 @@ while ~stop
     end
     count = count + 1;
     processes(count).process = process;
-    processes(count).hourlycost = hourlycost;
+    processes(count).hr_cost = hr_cost;
     processes(count).product1 = product1;
     processes(count).product2 = product2;
     processes(count).product3 = product3;
