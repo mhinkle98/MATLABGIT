@@ -128,6 +128,31 @@ and(h>=6, v<= 16)
 %%
 % P10
 
+% Method 2
+% With a continue statement
+
+clear; clc;
+numbers = [7 -2 0 -4];
+
+for ii = 1:length(numbers)
+    x = numbers(ii);
+    fprintf('x = %d\n',x);
+    fprintf('x^2 = %d\n', x^2);
+    fprintf('x^4 = %d\n', x^4);
+    if x >= 0
+        fprintf('x^(1/2) = %f\n',x^(1/2));
+        fprintf('x^(1/4) = %f\n',x^(1/4));
+    else
+        continue
+    end
+end
+
+
+%%
+% P11
+
+
+
 
 
 
