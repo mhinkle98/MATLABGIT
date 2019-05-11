@@ -153,7 +153,42 @@ end
 
 
 
+%% Problem 14
+clear; clc; close all
 
+data = xlsread('circuits.xls',1);
+
+r1 = data(1,1);
+v1 = data(2,1);
+i1 = v1/r1;
+p1 = (v1)^2/r1;
+
+r2 = data(1,2);
+v2 = data(2,2);
+i2 = v2/r2;
+p2 = (v2)^2/r2;
+
+r3 = data(1,3);
+v3 = data(2,3);
+i3 = v3/r3;
+p3 = (v3)^2/r3;
+
+r4 = data(1,4);
+v4 = data(2,4);
+i4 = v4/r4;
+p4 = (v4)^2/r4;
+
+r5 = data(1,5);
+v5 = data(2,5);
+i5 = v5/r5;
+p5 = (v5)^2/r5;
+
+current_and_power_data = [i1 i2 i3 i4 i5; p1 p2 p3 p4 p5];
+power_data = [p1 p2 p3 p4 p5];
+max_power = max(power_data);
+fprintf('highest average power:');
+disp(max_power);
+xlswrite('Power_data.xls',power_data);
 
 
 
