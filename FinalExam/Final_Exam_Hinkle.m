@@ -92,7 +92,21 @@ toc;
 % P8
 clear; clc;
 
+i = 1.2:0.05:1.8;
 
+h = 15;
+r = 8;
+
+V = (pi*r^2*h)*i;
+r = sqrt(V/(pi*h));
+fprintf("Volumes: ");
+disp(V);
+fprintf("Radii: ");
+disp(r);
+
+%%
+% P9
+clear;clc;
 
 
 
