@@ -68,12 +68,13 @@ r = roots(p)
 %%
 % P6
 clear; clc;
-m = zeros(11);
-m(2:10, 2:10) = 3*eye(9);
-m(2:5, 7:10) = 3*ones(4);
-m(2:5, 7:10) = 9*eye(4);
-m(7:10, 2:5) = 9*eye(4);
-m(2:10,1) = 1
+m = zeros(1, 11);
+m2 = ones(4,1);
+m3 = ones(1,4);
+m4 = 3*eye(4);
+m5 = 6*ones(4) + 3*eye(4);
+m6 = ones(1,11);
+M = [m; m2 m4 m2 m5 m2; m6; m2 m5 m2 m4 m2; m]
 
 
 
