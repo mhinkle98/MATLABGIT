@@ -109,9 +109,24 @@ disp(r);
 % P9
 clear;clc;
 
+% Part A
+
+A = 40; % in degrees (use sind)
+g = 9.81;
+v0 = 20;
+t = 0:0.1:10;
+h = v0.*t.*sind(A) - 0.5*g.*t.^2;
+v = sqrt(v0^2 - 2*v0*g.*t.*sind(A) + g^2.*t.^2);
+disp(h);
+disp(v);
+
+% Part B
+
+and(h>=6, v<= 16)
 
 
-
+%%
+% P10
 
 
 
